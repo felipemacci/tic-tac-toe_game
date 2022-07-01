@@ -58,8 +58,43 @@ body {
     display: block;
 }
 
-/*
-[data-position="2"] > .board__option-x {
-    display: block;
+.overlay {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
 }
-*/
+
+.overlay .content {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+.overlay .content h1 {
+    margin-bottom: 7px;
+}
+
+.overlay .content button {
+    margin-top: 180px;
+    padding: 16px 30px;
+    font-size: 20px;
+    color: white;
+    background: rgb(238, 134, 49);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.overlay .content button:hover {
+    filter: brightness(110%);
+}
+
+.overlay .content button:active {
+    transform: translateY(2px);
+}
