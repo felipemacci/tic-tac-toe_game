@@ -45,17 +45,8 @@ body {
 }
 
 .board__cell > * {
-    display: none;
     width: 83px;
     height: 83px;
-}
-
-.board__cell.x > .board__option-x {
-    display: block;
-}
-
-.board__cell.o > .board__option-o {
-    display: block;
 }
 
 .overlay {

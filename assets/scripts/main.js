@@ -16,6 +16,9 @@ const winningCombinations = [
 
 const setMark = (cell, classToAdd) => {
     cell.classList.add(classToAdd)
+
+    cell.innerHTML = ``
+    cell.innerHTML = `<img class="board__option-${classToAdd}" src="./assets/images/${classToAdd}.svg" alt="${classToAdd.toUpperCase()} Icon" />`
 }
 
 const verifyWin = (currentPlayer) => {
@@ -65,6 +68,8 @@ const startGame = () => {
         cell.classList.remove('x')
 
         cell.classList.remove('o')
+
+        cell.innerHTML = ``
 
         cell.removeEventListener('click', handleClick)
 
