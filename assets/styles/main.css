@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: rgb(75, 156, 221);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.board__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board__cell:nth-of-type(2),
+.board__cell:nth-of-type(5),
+.board__cell:nth-of-type(8) {
+    border-left: 7px solid rgb(44, 112, 168);
+    border-right: 7px solid rgb(44, 112, 168);
+}
+
+.board__cell:nth-of-type(4),
+.board__cell:nth-of-type(5),
+.board__cell:nth-of-type(6) {
+    border-top: 7px solid rgb(44, 112, 168);
+    border-bottom: 7px solid rgb(44, 112, 168);
+}
+
+.board__cell > * {
+    display: none;
+    width: 83px;
+    height: 83px;
+}
+
+.board__cell.x > .board__option-x {
+    display: block;
+}
+
+.board__cell.o > .board__option-o {
+    display: block;
+}
+
+/*
+[data-position="2"] > .board__option-x {
+    display: block;
+}
+*/
